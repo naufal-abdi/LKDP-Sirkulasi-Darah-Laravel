@@ -1,0 +1,429 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Titillium+Web:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #424242;
+  background-color: #f5f4f4;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+header {
+  border-bottom: 1px solid #f54748;  
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+/* 'bahnschrift', sans-serif; */
+
+header .nav-list {
+  display: none;
+  list-style: none;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+header .nav-item {
+  margin: 10px;
+}
+
+header .nav-list .nav-item a {
+  color: #185adb;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 14px 5px;
+}
+
+header .brand {
+  font-weight: 300;
+  font-size: 4em;
+  margin: .5rem 0.25em;
+  color: #212121;
+  display: flex;
+  align-items:center;
+}
+
+header .brand img {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  background-color: #f54748;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+header .brand h1 {
+  font-size: 24px;  
+  color: #185adb;
+}
+
+.header {
+  min-height: 56px;
+  transition: min-height 0.3s;
+}
+
+.header-menu {
+  font-size: 26px;
+  margin: 5px 20px 5px 5px;
+  display: block;
+  color: #f54748;
+  text-decoration: none;
+  padding: 6px 0 6px 26px;
+  background-color: transparent;
+  border: none;
+}
+
+
+
+.nav {  
+  left: -200px;
+  background-color: #31326f;  
+  width: 200px;
+  position: absolute;
+  transition: .5s all;
+  z-index: 2;
+}
+
+.nav.active {
+  left: 0;
+}
+
+.nav .nav-list .nav-item {
+  padding: 30px 20px 10px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.nav .nav-list .nav-item:last-of-type {
+  padding-bottom: 30px;
+}
+
+.nav .nav-list .nav-item a:hover, 
+.nav .nav-list .nav-item a:focus {
+  padding-left: 35px;
+}
+
+.nav .nav-list .nav-item a {
+  color: #ffc93c;
+  text-decoration: none;  
+  font-size: 16px;
+  padding: 16px 10px;
+}
+
+/* Home menu */
+.menu {
+  margin: 3em 10px 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-img {
+  padding: 10px;
+}
+
+.menu-img img {
+  width: 400px;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu-text .menu-title {
+  text-align: center;
+  line-height: 30px;
+  margin: 10px 1em;
+  font-family: 'Amaranth', sans-serif;
+  color: #777;
+}
+
+.menu-text hr {
+  margin-bottom: 2em;
+  border: 1px solid #ddd;
+}
+
+.menu-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.menu-thumb {
+  flex: 2;
+}
+
+.menu-thumb a{
+  width: 140px;
+  height: 140px;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f9f7f7;
+  border-radius: 5px;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.thumb-img {
+  background: #185adb;
+  width: 100%;
+  border-radius: 5px;
+  max-width: 80px;
+}
+
+.thumb-title {
+  color: #777;
+}
+
+
+/* Form Login */
+.login-card {
+  margin: 2rem 10px;
+  padding: 2em;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.login-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #777;
+}
+
+.login-form {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1em 1em 2em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login-form.wide-form {
+  max-width: unset;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6em;
+}
+
+.form-input-label {
+  margin-bottom: .5em;
+  font-size: 18px;
+  color: #777;
+}
+
+.form-input-text {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  border: none;
+  border-bottom: 1px solid transparent;
+  background: #f9f7f7;
+  color: #f54748;
+  outline: none;  
+  transition: .2s all;
+  font-family: sans-serif;
+}
+
+.form-input-text:focus {
+  border-bottom-color: #185adb;
+}
+
+.form-button {
+  text-align: center;
+}
+
+.form-button button {
+  width: 150px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #185adb;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  margin: .5em auto;
+}
+
+/* main */
+main {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+
+  /* Rencana Perubahan 
+  position: absolute;
+  top: 1em;
+  left: 0;
+  right: 0;
+  bottom: 3em;
+  */
+}
+
+
+
+/* footer */
+footer {
+  border-top: 1px solid #f54748;
+}
+
+footer.web {
+  background-color: #fff;
+  padding: 2em;
+  width: 100%;  
+  text-align: center;
+  margin-top: 2rem;
+  display: none;
+  position: fixed;
+  bottom: 0;
+}
+
+footer.web p {
+  color: #185adb;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+footer.mobile {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0 5px;
+  display: flex;  
+}
+
+footer.mobile .item {
+  flex: 1;
+  text-align: center;  
+}
+
+footer.mobile .item a {
+  text-decoration: none;
+}
+
+footer.mobile .item a i {
+  display: block;
+  font-size: 22px;
+  color: #185adb;
+}
+
+footer.mobile .item a span {
+  font-size: 14px;
+  color: #777;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+  header .nav-list {
+    display: flex !important;
+  }
+
+  .header-menu {
+    display: none !important;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu {
+    margin: 3em;
+  }
+
+  .form-button {
+    text-align: left;
+  }
+
+  footer.web {
+    display: block;
+  }
+
+  footer.mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .header-menu {
+    display: none !important;
+  }
+
+  .nav {
+    display: none;
+  }  
+  
+}
+
+@media screen and (min-width: 1200px) {
+  .header-menu {
+    display: none !important;
+  }  
+
+  .nav {
+    display: none;
+  }
+
+  main {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .menu {
+    max-width: 1200px;
+    
+  }
+}
